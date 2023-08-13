@@ -1,0 +1,29 @@
+
+<header>
+  <div class="container">
+    <!--<a routerLink="/" class="logo">EveryOne's Food</a>-->
+    <div class="dark fire">
+      <a routerLink="/" class="Blazing" contenteditable="true">Pranathi Hotels</a>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a routerLink="/login">Login</a>
+        </li>
+        <li class="menu-container">
+          <a routerLink="/dashboard">Pranathi</a>
+          <div class="menu">
+            <a routerLink="/profile">Profile</a>
+            <a routerLink="/orders">Orders</a>
+            <a routerLink="/">Logout</a>
+          </div>
+        </li>
+        <li>
+          <a routerLink="/cart-page">
+            Cart <span *ngIf="cartQuantity">{{cartQuantity}}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

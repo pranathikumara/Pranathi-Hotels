@@ -1,0 +1,36 @@
+
+<h1>Order Summary:</h1>
+
+<div class="container">
+    
+    <ul>
+      <li *ngFor="let cartItem of cart.items">
+        <div>
+          <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
+        </div>
+        <div>
+            {{cartItem.food.name}}
+    
+        </div>
+        <div>
+          
+         {{cartItem.quantity}}
+         
+        </div>
+        <div>
+          {{cartItem.price | currency}}
+        </div>
+    
+      </li>
+    </ul>
+    <div class="checkout">
+      <div>
+        <div class="foods-count">Count: {{cart.totalCount}}</div>
+        <div class="total-price">Total Price: {{cart.totalPrice|currency}}</div>
+      </div>
+    
+    
+    </div>
+    </div>
+    
+<h1>Your order has been placed, Thanks for choosing Pranathi Hotels service.</h1>
